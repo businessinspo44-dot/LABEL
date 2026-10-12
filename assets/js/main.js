@@ -1,0 +1,3 @@
+
+const menu=document.querySelector('.menu');const nav=document.querySelector('nav');if(menu&&nav)menu.addEventListener('click',()=>nav.classList.toggle('open'));document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
+const gate=document.getElementById('entryGate');const accept=document.getElementById('acceptGate');const shell=document.querySelector('.site-shell');if(gate&&accept&&shell){document.body.classList.add('gate-open');shell.classList.add('is-locked');accept.addEventListener('click',()=>{gate.hidden=true;shell.classList.remove('is-locked');document.body.classList.remove('gate-open')});}
